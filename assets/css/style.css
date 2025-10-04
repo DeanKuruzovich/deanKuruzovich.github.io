@@ -1,24 +1,29 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f5f5f5;
+  background: url("{{ '/assets/images/background.jpg' | relative_url }}") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
   color: #333;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-h1 {
-  font-size: 3em;
-  color: #222;
+/* Overlay to fade the background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.7); /* white tint, 70% transparent */
+  z-index: 0;
 }
 
-a.button {
-  display: inline-block;
-  padding: 0.75em 1.5em;
-  background-color: #0077cc;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-a.button:hover {
-  background-color: #005fa3;
+h1, p, a.button {
+  position: relative;
+  z-index: 1; /* put text above faded background */
 }
