@@ -3,7 +3,7 @@
 /* Basic layout */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: url("{{ '/assets/css/IMG_9817.jpeg.webp' | relative_url }}") no-repeat center center fixed;
+  background: url("{{ '/assets/images/backround.jpeg' | relative_url }}") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
