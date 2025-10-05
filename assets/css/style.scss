@@ -1,8 +1,9 @@
 ---
 ---
+/* Basic layout */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: url("{{ '/assets/images/background.jpg' | relative_url }}") no-repeat center center fixed;
+  background: url("{{ '/assets/css/IMG_9817.jpeg.webp' | relative_url }}") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -16,19 +17,22 @@ body {
   position: relative;
 }
 
+/* subtle overlay so text is readable but image is visible */
 body::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 255, 255, 0.7);
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25); /* lower alpha so image shows through */
   z-index: 0;
 }
 
-h1, p, a.button {
+/* put content above overlay */
+.hero, h1, p, a.button {
   position: relative;
   z-index: 1;
 }
 
+/* button styling */
 a.button {
   display: inline-block;
   padding: 0.75em 1.5em;
@@ -43,4 +47,3 @@ a.button {
 a.button:hover {
   background-color: #005fa3;
 }
-
