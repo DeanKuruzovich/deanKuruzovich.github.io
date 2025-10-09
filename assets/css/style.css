@@ -1,8 +1,10 @@
+/* === Base Page Styling === */
 body {
   font-family: Arial, sans-serif;
   margin: 2em;
   text-align: center;
   color: #222;
+  background-color: #fdfdfd;
 }
 
 h1 {
@@ -15,12 +17,31 @@ p {
   margin-bottom: 2em;
 }
 
-/* Gallery styling */
+/* === Navigation Buttons === */
+a.button {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0.5em;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.button:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* === Gallery Styling === */
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5em; /* space between images */
+  margin-top: 2em;
 }
 
 .gallery img {
@@ -28,7 +49,7 @@ p {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
