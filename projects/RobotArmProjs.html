@@ -2,39 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RC Car Project</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Robotic Arm Project</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
-    <div class="back-button">
-        <button onclick="window.location.href='index.html'">
-            Back
-        </button>
+<header class="site-header">
+    <div class="container">
+        <small class="kicker">Projects</small>
+        <h1>Robotic Arms</h1>
     </div>
+</header>
 
-    <h1>Wi-Fi Controlled RC Car</h1>
+<main class="project-page container" id="main">
+    <article class="project">
+        <p>
+            Throughout robotics club, I have been interested in robotic arms, which is why I began
+            building one. My end goal has been to create a cheap, 3D-printable robotic arm using
+            inexpensive motors rather than stepper motors or servos, which are typically used but
+            are often significantly more expensive and have worse power ratings. This approach also
+            allows me to design a custom control system.
+        </p>
 
-    <p>
-        This project involved designing and building a Wi-Fi controlled RC car
-        using a Raspberry Pi. The system streams live video from a Pi camera
-        and allows remote control through a web interface.
-    </p>
+        <h2>V1</h2>
 
-    <img src="images/rc-car-1.jpg" alt="RC Car prototype">
+        <div class="image-row">
+            <figure class="tall-figure">
+                <img loading="lazy"
+                    src="../assets/images/robotArm/electronicsStriped.jpeg"
+                    alt="Arm V1 without wiring">
+                <figcaption>Electronics mounted on V1</figcaption>
+            </figure>
 
-    <p>
-        The vehicle uses two servos for steering and throttle control.
-        Communication is handled over a local Wi-Fi network, with a lightweight
-        Python backend running on the Pi.
-    </p>
+            <figure class="tall-figure">
+                <img loading="lazy"
+                    src="../assets/images/robotArm/arm.png"
+                    alt="Arm V1 assembled">
+                <figcaption>V1 assembled</figcaption>
+            </figure>
 
-    <img src="images/rc-car-2.jpg" alt="RC Car wiring">
+        </div>
 
-    <p>
-        This project focused on embedded systems, networking, and real-time
-        control rather than frontend design.
-    </p>
+        <p>
+            This was my first design of a robotic arm. It was experimental and had many flaws, but it
+            allowed me to explore ideas like a custom 3D-printed planetary gearbox and mounting
+            electronics on the arm to reduce wiring and avoid a large external driver board. The
+            arm was driven by a Raspberry Pi 3 with the intention of using the camera module and
+            AprilTags for control rather than external encoders.
+        </p>
+
+        <p>
+            This is the gripper I designed. It is not powerful enough to do much   it uses a small
+            9-gram servo.
+        </p>
+
+        <div class="image-row">
+            <figure>
+                <img loading="lazy" src="../assets/images/robotArm/grip render.png"
+                     alt="Gripper rendering">
+                <figcaption>Gripper rendering</figcaption>
+            </figure>
+
+            <figure>
+                <img loading="lazy" src="../assets/images/robotArm/grip.jpeg"
+                     alt="Gripper prototype">
+                <figcaption>Prototype gripper</figcaption>
+            </figure>
+        </div>
+
+        <p>
+            Before the second iteration, I built a mini arm using potentiometers to measure joint
+            positions on a roughly 10 cm tall 3D-printed arm. The potentiometers are read by an
+            Arduino Uno which can communicate with a larger arm driver for calibration and training
+            of future autonomous control systems.
+        </p>
+
+        <figure class="single">
+            <img loading="lazy" src="../assets/images/robotArm/render miniarm.png"
+                 alt="Mini arm rendering">
+            <figcaption>Mini arm rendering</figcaption>
+        </figure>
+    </article>
+</main>
 
 </body>
 </html>
