@@ -319,3 +319,7 @@ a:focus, button:focus {
   text-decoration: underline;
 }
 
+.centered-section {
+    text-align: center;
+}
+
