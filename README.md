@@ -1,3 +1,3 @@
-Link to website: deanKuruzovich.github.io
+[deankuruzovich.github.io](deankuruzovich.github.io)
 
 
