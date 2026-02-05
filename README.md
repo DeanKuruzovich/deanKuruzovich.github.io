@@ -1,3 +1,3 @@
-[deankuruzovich.github.io](deankuruzovich.github.io)
+[deankuruzovich.github.io](https://deankuruzovich.github.io)
 
 
