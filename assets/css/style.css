@@ -145,6 +145,90 @@ p {
     padding: 28px 20px;
 }
 
+/* ---- Home page split layout (one viewport) ---- */
+
+body.home {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #fff;
+}
+
+body.home .container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.home-split {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+}
+
+.home-copy {
+    padding: 40px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body.home .site-header h1 {
+    font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+}
+
+body.home .site-header p {
+    margin: 12px 0;
+}
+
+body.home .button-row {
+    margin-top: 16px;
+}
+
+body.home .site-footer {
+    margin-top: 22px;
+}
+
+.home-image {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.00) 0%,
+            rgba(255, 255, 255, 0.00) 55%,
+            rgba(255, 255, 255, 0.18) 100%
+        ),
+        url("../images/rpistairsimage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 900px) {
+    body.home {
+        height: auto;
+        overflow: auto;
+    }
+
+    body.home .container {
+        height: auto;
+    }
+
+    .home-split {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .home-image {
+        min-height: 38vh;
+    }
+
+    .home-copy {
+        padding: 28px 20px;
+    }
+}
+
 /* Header / small title */
 .site-header .kicker {
     display: block;
