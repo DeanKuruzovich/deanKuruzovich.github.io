@@ -407,3 +407,12 @@ a:focus, button:focus {
     text-align: center;
 }
 
+/* List styling for project pages */
+.project-page ul {
+    margin: 12px 0 16px 0;
+    padding-left: 1.4em;
+    font-size: 1rem;
+    color: #222;
+    line-height: 1.7;
+}
+
