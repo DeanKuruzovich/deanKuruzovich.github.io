@@ -173,6 +173,8 @@ body.home .container {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    text-align: center;
+    align-items: center;
 }
 
 body.home .site-header h1 {
@@ -505,4 +507,6 @@ a:focus, button:focus {
     font-size: 0.82rem;
     color: #666;
 }
+
+
 
