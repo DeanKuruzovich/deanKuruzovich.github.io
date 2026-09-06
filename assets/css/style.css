@@ -47,6 +47,10 @@ p {
     padding: 0 24px;
 }
 
+.projects-header {
+    text-align: center;
+}
+
 .projects-header h1 {
     font-size: 32px;
     margin-bottom: 8px;
@@ -427,6 +431,7 @@ a:focus, button:focus {
 
 .cert-page-header {
     margin-bottom: 36px;
+    text-align: center;
 }
 
 .cert-page-header h1 {
