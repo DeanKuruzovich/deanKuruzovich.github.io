@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Boolean Algebra Visualizer</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+    <main class="project-page">
+
+        <h1>Boolean Algebra Visualizer Website</h1>
+
+        <p>
+            Boolean Algebra Visualizer is a small web app that turns boolean expressions into
+            multiple visual representations, making digital logic easier to understand and
+            teach.
+        </p>
+
+        <p>
+            The site is live at
+            <a href="https://booleanalgebravisualizer.github.io/" target="_blank" rel="noopener noreferrer">
+                https://booleanalgebravisualizer.github.io/
+            </a>.
+        </p>
+
+        <h2>What it does</h2>
+
+        <p>
+            At the top of the page there is a textbox where you can type boolean algebra
+            expressions in several common notations, for example (a nor b) or !(a+b'c).
+        </p>
+
+        <p>
+            Below the input, the rest of the interface is organized into four tabs:
+            the gate level block diagrams, the CMOS transistor diagram, and the corresponding truth table. These tabs cannot be edited directly; the only
+            thing the user changes is the expression in the textbox, and all of the diagrams
+            and tables update automatically.
+        </p>
+
+        <h2>Why I built it</h2>
+
+        <p>
+            I originally built this tool for my Computer Components and Operations course.
+            Drawing CMOS transistor networks, logic gate diagrams, and large truth tables by
+            hand or in tools like draw.io or Google Drawings was slow and repetitive,
+            especially for lecture slides and homework with many variations on the same
+            expression.
+        </p>
+
+        <p>
+            By generating these diagrams automatically, students and instructors can focus on
+            understanding how the circuits work instead of spending time on drawing complex diagrams or making  
+            Karnaugh maps and truth tables for
+            multi variable expressions, removing a lot of the tedious bookkeeping without
+            doing the logical reasoning for you.
+        </p>
+
+        <h2>How it's built</h2>
+
+        <p>
+            The visualizer runs entirely in the browser using HTML, CSS, and JavaScript, and
+            is hosted on GitHub Pages. The JavaScript parses the input expression into an
+            internal representation, which is then used to build the
+            logic gate diagram, synthesize the CMOS pull up and pull down networks, and
+            enumerate rows of the truth table and K maps.
+        </p>
+
+        <h2>Issues faced</h2>
+        <p>
+            One of the hardest parts was designing a parser flexible enough to accept
+            different syntaxes for boolean algebra while still catching mistakes in the input.
+            Mapping that parsed expression into both gate level diagrams and CMOS transistor
+            networks was also challenging, since the rules for series and parallel transistors
+            must match the logical operations exactly, and creating a layout where the transistors, or
+            logical gates and there connecting signal lines didnt overlap proved very difficuly
+        </p>
+
+
+
+        <div class="image-row">
+            <figure class="tall-figure">
+                <img 
+                    src="../assets/images/booleanalgebravisualizer/full.png" alt="Boolean algebra visualizer gate and truth table view">
+                <figcaption>Block diagram and truth table generator</figcaption>
+            </figure>
+            <figure class="tall-figure">
+                <img 
+                    src="../assets/images/booleanalgebravisualizer/cmos.png" alt="Boolean algebra visualizer CMOS transistor diagram">
+                <figcaption>CMOS transistor level diagram generator</figcaption>
+            </figure>
+        </div>
+
+        <h2>Reflection</h2>
+
+        <p>
+            This project was very fun and rewarding. Building the visualizer forced me to
+            connect boolean algebra, truth tables, and CMOS transistor level implementations in
+            a concrete way, and it gave me a tool I can keep improving and using to explain
+            these concepts to others.
+        </p>
+
+    </main>
+
+</body>
+</html>
